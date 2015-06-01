@@ -1,6 +1,4 @@
-phpunit.xml
 composer.phar
-composer.lock
 composer-test.lock
 vendor/
 build/artifacts/
@@ -9,3 +7,4 @@ docs/_build
 docs/*.pyc
 .idea
 .DS_STORE
+.solano*
