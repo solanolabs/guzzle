@@ -1,0 +1,23 @@
+# Solano CI configuration
+
+php:
+  version: '5.5.16'
+
+hooks:
+  pre_setup: composer.phar install
+
+cache:
+  key_paths:
+    - composer.json
+    - composer.lock
+  save_paths:
+    - vendor
+
+tests:
+  - type: phpunit
+    mode: parallel
+    output: exit-status
+    command: vendor/bin/solano-phpunit
+    config: phpunit.xml
+    files:
+      - tests/**Test.php
