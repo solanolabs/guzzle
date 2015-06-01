@@ -1,7 +1,8 @@
 Guzzle, PHP HTTP client and webservice framework
 ================================================
 
-[![Build Status](https://secure.travis-ci.org/guzzle/guzzle.svg?branch=master)](http://travis-ci.org/guzzle/guzzle)
+![Solano CI Build Status](https://ci.solanolabs.com/solanolabs/guzzle/badges/branches/master?badge_token=8ab4c2b88437c1e09cf0611b0c3248286ab86768)
+
 
 Guzzle is a PHP HTTP client that makes it easy to send HTTP requests and
 trivial to integrate with web services.

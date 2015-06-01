@@ -6,6 +6,7 @@ php:
 hooks:
   pre_setup: composer.phar install
 
+# Cache vendor directory for faster builds
 cache:
   key_paths:
     - composer.json
@@ -18,6 +19,6 @@ tests:
     mode: parallel
     output: exit-status
     command: vendor/bin/solano-phpunit
-    config: phpunit.xml
+    config: phpunit.xml                    # If not supplied, phpunit.xml and phpunit.xml.dist are defaults
     files:
       - tests/**Test.php
