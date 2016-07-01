@@ -5,6 +5,7 @@ php:
 
 hooks:
   pre_setup: composer.phar install
+  enumeration: php basic_enumeration.php
 
 # Cache vendor directory for faster builds
 cache:
@@ -13,12 +14,14 @@ cache:
     - composer.lock
   save_paths:
     - vendor
-
-tests:
-  - type: phpunit
-    mode: parallel
-    output: exit-status
-    command: vendor/bin/solano-phpunit
-    config: phpunit.xml                    # If not supplied, phpunit.xml and phpunit.xml.dist are defaults
-    files:
-      - tests/**Test.php
+plan:
+  - default
+  - subscriber
+  - event
+profiles:
+  default:
+    test_pattern: 'none'
+  subscriber:
+    test_pattern: 'none'
+  event:
+    test_pattern: 'none'
